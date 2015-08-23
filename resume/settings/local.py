@@ -1,7 +1,7 @@
 from .base import *
 
 DEBUG = True
-
+TEMPLATE_DEBUG = DEBUG
 
 # Database
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
@@ -14,3 +14,5 @@ DATABASES = {
 }
 
 INSTALLED_APPS += ("debug_toolbar",)
+
+SECRET_KEY = '#kp*t8+o@q=jr^7kcmxc2@-x8-y78p64br_xh73lzqh0qkp48@'
