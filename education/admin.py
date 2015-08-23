@@ -5,13 +5,13 @@ from .models import School, Education
 
 class EducationInline(admin.TabularInline):
 	model = Education
-	extra = 3
+	extra = 1
 
 @admin.register(School)
 class SchoolAdmin(admin.ModelAdmin):
 	fieldsets = [
 		(None,   {'fields' : ['name']}),
-		('City', {'fields' : ['location'], 'classes':['collapse']})
+		(None, {'fields' : ['location']})
 	]
 	inlines = [EducationInline]
 	list_display = ('name','location')

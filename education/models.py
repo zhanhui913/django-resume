@@ -12,6 +12,7 @@ class School(models.Model):
 class Education(models.Model):
 	school = models.ForeignKey(School, related_name='school')
 	degree = models.CharField(max_length=500)
+	major = models.CharField(max_length=500, blank=True)
 	start_date = models.DateField('start date')
 	end_date = models.DateField('end date')
 
